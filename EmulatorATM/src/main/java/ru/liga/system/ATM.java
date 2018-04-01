@@ -1,5 +1,7 @@
 package ru.liga.system;
 
+import ru.liga.exceptions.InvalidOperationException;
+import ru.liga.exceptions.NoBanknotesException;
 import ru.liga.system.algorithm.Banknotes;
 
 public class ATM {
@@ -8,13 +10,14 @@ public class ATM {
     public void putBanknote(int denomination) {
         banknotes.putBanknote(denomination);
     }
-    public Banknotes returnAmountAsMinimumBanknotesNumber(int amount) {
+    public Banknotes returnAmountAsMinimumBanknotesNumber(int amount)
+            throws NoBanknotesException {
         try {
             return banknotes.returnAmountAsMinimumBanknotesNumber(amount);
-        } catch (Exception e) {
+        } catch (InvalidOperationException e) {
             e.printStackTrace();
         }
-        return new Banknotes();
+        return null;
     }
     public int getRemainingAmountOnAccount() {
         return banknotes.getAmount();

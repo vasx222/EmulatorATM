@@ -6,15 +6,11 @@ import ru.liga.exceptions.NoBanknotesException;
 import java.util.*;
 
 public class Banknotes {
-    private Map<Integer, Integer> banknotes;
+    private SortedMap<Integer, Integer> banknotes;
     private Set<State> usedStates;
 
     public Banknotes() {
-        this.banknotes = new TreeMap<>();
-    }
-
-    public Banknotes(Map<Integer, Integer> banknotes) {
-        this.banknotes = banknotes;
+        this.banknotes = new TreeMap<>(Comparator.reverseOrder());
     }
 
     public void putBanknote(int denomination) {
@@ -58,7 +54,7 @@ public class Banknotes {
 
     public Banknotes returnAmountAsMinimumBanknotesNumber(int amount)
             throws NoBanknotesException, InvalidOperationException {
-        Banknotes banknotes = new Banknotes(new TreeMap<>(this.banknotes));
+        Banknotes banknotes = this.getCopy();
         usedStates = new HashSet<>();
         usedStates.add(new State(amount, banknotes));
         Banknotes resultBanknotes = search(amount, banknotes);
@@ -71,7 +67,7 @@ public class Banknotes {
 
     private Banknotes search(int amount, Banknotes banknotes) throws InvalidOperationException {
         if (amount == 0) {
-            Banknotes resultBanknotes = new Banknotes(new TreeMap<>(this.banknotes));
+            Banknotes resultBanknotes = this.getCopy();
             resultBanknotes.deduct(banknotes);
             return resultBanknotes;
         }
@@ -80,7 +76,7 @@ public class Banknotes {
             if (newAmount < 0) {
                 continue;
             }
-            Banknotes newBanknotes = new Banknotes(new TreeMap<>(banknotes.banknotes));
+            Banknotes newBanknotes = banknotes.getCopy();
             int reserve = newBanknotes.getAmount() - denomination;
             if (reserve < 0) {
                 continue;
@@ -110,6 +106,7 @@ public class Banknotes {
             }
             if (rest == 0) {
                 this.banknotes.remove(entry.getKey());
+                continue;
             }
             this.banknotes.put(entry.getKey(), rest);
         }
@@ -128,5 +125,10 @@ public class Banknotes {
         Banknotes banknotes = new Banknotes();
         banknotes.add(this);
         return banknotes;
+    }
+
+    @Override
+    public String toString() {
+        return banknotes.toString();
     }
 }
