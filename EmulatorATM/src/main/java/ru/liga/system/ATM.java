@@ -1,25 +1,28 @@
 package ru.liga.system;
 
-import ru.liga.exceptions.InvalidOperationException;
-import ru.liga.exceptions.NoBanknotesException;
 import ru.liga.system.algorithm.Banknotes;
 
 public class ATM {
     private Banknotes banknotes = new Banknotes();
-    private Banknotes initialBanknotes = new Banknotes();
+    private Banknotes initialBanknotes;
+
+    public ATM() {
+        this.initialBanknotes = new Banknotes();
+    }
+    public ATM(Banknotes initialBanknotes) {
+        this.initialBanknotes = initialBanknotes;
+    }
+
     public void putBanknote(int denomination) {
         banknotes.putBanknote(denomination);
     }
-    public Banknotes returnAmountAsMinimumBanknotesNumber(int amount)
-            throws NoBanknotesException {
-        try {
-            return banknotes.returnAmountAsMinimumBanknotesNumber(amount);
-        } catch (InvalidOperationException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public Banknotes returnAmountAsLargeBanknotes(int amount) {
+        return banknotes.returnAmountAsLargeBanknotes(amount);
     }
-    public int getRemainingAmountOnAccount() {
+    public Banknotes returnAmountAsSmallBanknotes(int amount) {
+        return banknotes.returnAmountAsSmallBanknotes(amount);
+    }
+    public int getRemainingAmount() {
         return banknotes.getAmount();
     }
     public Banknotes returnAllBanknotes() {
@@ -29,8 +32,5 @@ public class ATM {
     }
     public void restoreInitialState() {
         banknotes = initialBanknotes.getCopy();
-    }
-    public void setInitialState(Banknotes banknotes) {
-        initialBanknotes = banknotes;
     }
 }

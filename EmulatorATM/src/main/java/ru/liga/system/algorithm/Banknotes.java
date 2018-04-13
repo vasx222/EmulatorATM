@@ -7,10 +7,14 @@ import java.util.*;
 
 public class Banknotes {
     private SortedMap<Integer, Integer> banknotes;
-    private Set<State> usedStates;
+    private Set<GraphState> usedStates;
 
     public Banknotes() {
         this.banknotes = new TreeMap<>(Comparator.reverseOrder());
+    }
+
+    private Banknotes(SortedMap<Integer, Integer> banknotes) {
+        this.banknotes = banknotes;
     }
 
     public void putBanknote(int denomination) {
@@ -52,11 +56,10 @@ public class Banknotes {
         return Objects.hash(banknotes);
     }
 
-    public Banknotes returnAmountAsMinimumBanknotesNumber(int amount)
-            throws NoBanknotesException, InvalidOperationException {
+    public Banknotes returnAmountAsLargeBanknotes(int amount) {
         Banknotes banknotes = this.getCopy();
         usedStates = new HashSet<>();
-        usedStates.add(new State(amount, banknotes));
+        usedStates.add(new GraphState(amount, banknotes));
         Banknotes resultBanknotes = search(amount, banknotes);
         if (resultBanknotes == null) {
             throw new NoBanknotesException();
@@ -65,7 +68,21 @@ public class Banknotes {
         return resultBanknotes;
     }
 
-    private Banknotes search(int amount, Banknotes banknotes) throws InvalidOperationException {
+    public Banknotes returnAmountAsSmallBanknotes(int amount) {
+        SortedMap<Integer, Integer> map = new TreeMap<>(Comparator.naturalOrder());
+        map.putAll(this.banknotes);
+        Banknotes banknotes = new Banknotes(map);
+        usedStates = new HashSet<>();
+        usedStates.add(new GraphState(amount, banknotes));
+        Banknotes resultBanknotes = search(amount, banknotes);
+        if (resultBanknotes == null) {
+            throw new NoBanknotesException();
+        }
+        this.deduct(resultBanknotes);
+        return resultBanknotes;
+    }
+
+    private Banknotes search(int amount, Banknotes banknotes) {
         if (amount == 0) {
             Banknotes resultBanknotes = this.getCopy();
             resultBanknotes.deduct(banknotes);
@@ -82,7 +99,7 @@ public class Banknotes {
                 continue;
             }
             newBanknotes.removeBanknote(denomination);
-            State newState = new State(newAmount, newBanknotes);
+            GraphState newState = new GraphState(newAmount, newBanknotes);
             if (!usedStates.contains(newState)) {
                 usedStates.add(newState);
                 Banknotes resultBanknotes = search(newAmount, newBanknotes);
@@ -95,7 +112,7 @@ public class Banknotes {
         return null;
     }
 
-    public void deduct(Banknotes banknotes) throws InvalidOperationException {
+    public void deduct(Banknotes banknotes) {
         for (Map.Entry<Integer, Integer> entry : banknotes.banknotes.entrySet()) {
             if (!this.banknotes.containsKey(entry.getKey())) {
                 throw new InvalidOperationException();

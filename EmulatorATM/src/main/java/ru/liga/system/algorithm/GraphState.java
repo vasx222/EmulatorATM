@@ -1,12 +1,20 @@
 package ru.liga.system.algorithm;
 
+import java.util.HashSet;
 import java.util.Objects;
 
-public class State {
-    private int amount;
-    private Banknotes banknotes;
+/**
+ * Для реализации алгоритма выдачи суммы минимальным числом купюр
+ * используется граф состояний.
+ * Класс GraphState реализует состояние графа, где
+ * amount - сумма, которую осталось выдать,
+ * banknotes - оставшееся число купюр.
+ */
+class GraphState {
+    private final int amount;
+    private final Banknotes banknotes;
 
-    public State(int amount, Banknotes banknotes) {
+    GraphState(int amount, Banknotes banknotes) {
         this.amount = amount;
         this.banknotes = banknotes;
     }
@@ -15,7 +23,7 @@ public class State {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        State state = (State) o;
+        GraphState state = (GraphState) o;
         return amount == state.amount &&
                 Objects.equals(banknotes, state.banknotes);
     }
