@@ -1,23 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a8a9a51-beef-46fa-b330-a41ca9d60549" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore/.gitignore" beforeDir="false" />
+    <list default="true" id="5a8a9a51-beef-46fa-b330-a41ca9d60549" name="Default" comment="added gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/liga/exceptions/InvalidOperationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/liga/exceptions/InvalidOperationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/liga/exceptions/NoBanknotesException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/liga/exceptions/NoBanknotesException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/liga/system/ATM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/liga/system/ATM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/liga/system/algorithm/Banknotes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/liga/system/algorithm/Banknotes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/liga/system/algorithm/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/liga/system/algorithm/GraphState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/liga/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/liga/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/liga/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/liga/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/liga/exceptions/InvalidOperationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/liga/exceptions/InvalidOperationException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/liga/exceptions/NoBanknotesException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/liga/exceptions/NoBanknotesException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/liga/system/ATM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/liga/system/ATM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/liga/system/ATMDepartment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/liga/system/ATMDepartment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/liga/system/algorithm/Banknotes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/liga/system/algorithm/Banknotes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/liga/system/algorithm/State.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/liga/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/liga/AppTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,7 +19,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/liga/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
-              <caret line="167" column="38" lean-forward="true" selection-start-line="167" selection-start-column="38" selection-end-line="167" selection-end-column="38" />
+              <caret line="167" column="38" selection-start-line="167" selection-start-column="38" selection-end-line="167" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/liga/App.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -119,8 +104,8 @@
       <file leaf-file-name="Banknotes.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/liga/system/algorithm/Banknotes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="288">
+              <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#298#299#0" expanded="true" />
@@ -146,7 +131,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>throws InvalidOperationException</find>
+      <find />
       <find>getCopy</find>
       <find>clone</find>
     </findStrings>
@@ -172,8 +157,8 @@
         <option value="$PROJECT_DIR$/src/test/java/ru/liga/AppTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/liga/system/ATM.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/liga/system/Dispenser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/liga/system/algorithm/Banknotes.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/liga/system/algorithm/GraphState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/liga/system/algorithm/Banknotes.java" />
       </list>
     </option>
   </component>
@@ -288,6 +273,11 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="liga" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EmulatorATM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EmulatorATM" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -503,7 +493,7 @@
       <workItem from="1522616540582" duration="5148000" />
       <workItem from="1523466178712" duration="3542000" />
       <workItem from="1523472132489" duration="2215000" />
-      <workItem from="1523636920006" duration="4120000" />
+      <workItem from="1523636920006" duration="4678000" />
     </task>
     <task id="LOCAL-00001" summary="added tests and fixed bugs">
       <created>1522621320084</created>
@@ -512,7 +502,21 @@
       <option name="project" value="LOCAL" />
       <updated>1522621320084</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed issues">
+      <created>1523641170515</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1523641170515</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added gitignore">
+      <created>1523641333190</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1523641333190</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -548,7 +552,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27926000" />
+    <option name="totallyTimeSpent" value="28484000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
@@ -564,8 +568,8 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5003984" side_tool="true" weight="0.32917318" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996016" visible="true" weight="0.32917318" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32917318" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996016" weight="0.32917318" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -589,12 +593,24 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added tests and fixed bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="added tests and fixed bugs" />
+    <MESSAGE value="fixed issues" />
+    <MESSAGE value="added gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="added gitignore" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/liga/AppTest.java">
@@ -1034,7 +1050,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/liga/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
-          <caret line="167" column="38" lean-forward="true" selection-start-line="167" selection-start-column="38" selection-end-line="167" selection-end-column="38" />
+          <caret line="167" column="38" selection-start-line="167" selection-start-column="38" selection-end-line="167" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1044,7 +1060,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/liga/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -1088,8 +1104,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/liga/system/algorithm/Banknotes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="288">
+          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#298#299#0" expanded="true" />
